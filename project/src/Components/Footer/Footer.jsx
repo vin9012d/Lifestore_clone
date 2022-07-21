@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <Box>
             
-
+<h1>vinod</h1>
 
         </Box>
     )
