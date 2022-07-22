@@ -5,14 +5,16 @@ import FooterTop from './Components/Footer/FooterTop';
 import FooterCategory from './Components/Footer/FooterCategory';
 import Category from './Components/Category/Category';
 import FooterBottom from './Components/Footer/FooterBottom';
+import Products from './Components/Products/Products';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Category/>
+      {/* <Category/>
       <FooterTop />
-      <FooterCategory />
+      <FooterCategory /> */}
+      <Products/>
       <FooterBottom/>
     </div>
   );
