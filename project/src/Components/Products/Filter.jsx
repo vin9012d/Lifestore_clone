@@ -2,8 +2,8 @@ import { Box, Select,Grid } from "@chakra-ui/react";
 
 export default function Filter({handleFilter,handleColor,handleType,handleMaterial,handleSize,handleBrand}) {
     return (
-        <Box>
-            <Grid templateColumns='repeat(4, 1fr)' gap={10}>
+        <Box >
+            <Grid  templateColumns='repeat(4, 1fr)' gap={10}>
             <Box>
             <Select onChange={handleFilter} placeholder='Price'>
                 <option value="LTH">Low to High</option>
@@ -44,8 +44,8 @@ export default function Filter({handleFilter,handleColor,handleType,handleMateri
                 </Select>
              </Box>
             <Box>
-            <Select onChange={handleSize} >
-                <option value="x">X</option>
+            <Select onChange={handleSize} placeholder="Size" >
+                <option value="l">L</option>
                 <option value="xl">XL</option>
                 <option value="md">MD</option>
           

@@ -11,27 +11,27 @@ export default function FooterBottom() {
               
                   <Flex w="60%" justifyContent="space-between">
                 <Flex>
-                <Box p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%"> <PhoneIcon /></Box>
+                <Box mr="16px" p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%"> <PhoneIcon /></Box>
                            
-                            <Box>
+                            <Box textAlign="start"> 
                                 <Text>Talk to us</Text>
                                 <Text>1800-123-1555</Text>
                             </Box>
                 </Flex>
                 <Flex>
                   
-                    <Box p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%">   <QuestionIcon /></Box>
+                    <Box mr="16px" p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%">   <QuestionIcon /></Box>
                     <Box>
-                        <Text>Helpcentre</Text>
+                        <Text textAlign="start">Helpcentre</Text>
                         <Text>help.lifestylestores.com</Text>
                     </Box>
 
                 </Flex>
                 <Flex>
                    
-                    <Box p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%">   <EmailIcon /></Box>
+                    <Box mr="16px" p="5px" border="1px solid black" w="40px" h="40px" borderRadius="50%">   <EmailIcon /></Box>
                     <Box>
-                        <Text>Write to us</Text>
+                        <Text textAlign="start">Write to us</Text>
                         <Text>help.lifestylestores.com</Text>
                     </Box>
                     </Flex>
@@ -47,11 +47,12 @@ export default function FooterBottom() {
                 
 
             </Flex>
-            <Flex>
-                <Img w="80px" src={logo} alt="logo" />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "20px", marginTop: "30px" }} />
+            <Flex mb="30px">
+                <Img mr="16px" w="80px" src={logo} alt="logo" />
                 <Box>
-                    <Text>© 2022 RNA Intellectual Property Limited.</Text>
-                    <Text>Terms & Conditions - Privacy Policy</Text>
+                    <Text textAlign="start" >© 2022 RNA Intellectual Property Limited.</Text>
+                    <Text textAlign="start">Terms & Conditions - Privacy Policy</Text>
                 </Box>
                 
             </Flex>

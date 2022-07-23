@@ -6,11 +6,13 @@ import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook,faInstagram,faTwitter   } from '@fortawesome/free-brands-svg-icons';
 import { faHeart} from '@fortawesome/free-regular-svg-icons';
 import img1 from  "../Medias/lifestyle-logo.png"
+import Signin from "../Regestration/Sigin";
 
-export default function Navbar(){
+export default function Navbar() {
+  
     return (
-        <Box bg="#f7f8f7" h="55px"  w="100%"> 
-            <Stack direction={{ base: "row" }} spacing="10" p="5px" alignItems="center">
+        <Box bg="#f7f8f7" h="60px"  w="100%" pl="20px"> 
+            <Stack direction={{ base: "row" }} spacing="9" p="5px"  alignItems="center" >
             <Img src={img1} alt="logo" sx={{height:"30px"}} />  
                 <Text>Men</Text>
                 <Text>Women</Text>
@@ -23,10 +25,11 @@ export default function Navbar(){
                     <Search2Icon position="absolute" left="10px" top="13px" color="black" />
                     </Flex>
                 <Text>More</Text>
-                <Text>Sign Up/Signin</Text>
+                {/* <Text>Sign Up/Signin</Text> */}
+                <Signin />
      
-           <span><FontAwesomeIcon icon={faHeart} /></span>
-           <span><FontAwesomeIcon icon={faBagShopping}  bg="white"/></span>
+           <span><FontAwesomeIcon icon={faHeart} size="xl"  /></span>
+           <span><FontAwesomeIcon icon={faBagShopping} size="xl" bg="white"/></span>
              
           </Stack>
         </Box>

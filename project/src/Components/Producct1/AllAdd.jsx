@@ -8,29 +8,41 @@ import slider4 from "./Medias/slider4.jpg"
 
 export default function AllAdd() {
     const [slider, setSlider] = useState([]);
-    
+    const [sldimg,setSldimg]=useState(0)
+
+
     useEffect(() => {
         axios.get(`https://calm-harbor-19932.herokuapp.com/slider`)
             .then((res) => {
-                if (slider.id == 3) {
-                    slider.id=4
-                }
-                setInterval(() => {
-                
-                    setSlider((prev))
+              console.log(res.data)
+                    setSlider(res.data)
+        }).catch((err)=>{console.log(err)})
+    }, [])
+    useEffect(() => {
+       let id= setInterval(() => {
+            if (sldimg == 3) {
+                setSldimg(0)
+            }else setSldimg((sldimg)=>sldimg+1)
+        },[3000])
+        return () => {
+            console.log("cleaner")
+            clearInterval(id)
+        }
+    },[sldimg])
+    
 
-            },[2000])
-        })
-    },[slider])
     return (
         <Box>
-            {slider.map((item) => (
-                <Img/>
-            ))}
-            <Img src={slider2} alt="slider2" />
-            <Img src={slider3} alt="slider3" />
-            <Img src={slider3a} alt="slider3a" />
-            <Img src={slider4} alt="slider4" />
+            {slider.length > 0 ? <Img src={slider[sldimg].image} h="400px" w="100%%" alt="sliderimage" /> : <h1>Loading...</h1>}
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
+            <Img w="100%" src={slider2} alt="slider2" />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
+            <Img w="100%" src={slider3} alt="slider3" />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
+            <Img w="100%" src={slider3a} alt="slider3a" />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
+            <Img w="100%" src={slider4} alt="slider4" />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
 
         </Box>
     )

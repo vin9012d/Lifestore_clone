@@ -3,9 +3,10 @@ import { Box,Flex,Text } from "@chakra-ui/react";
 export default function FooterCategory() {
     return (
         <Box>
+             
             <Flex  textAlign="left" flexWrap="wrap"  >
-                <Box w="20%">
-                    <Text>Women</Text>
+                <Box w="20%" mb="30px">
+                    <Text >Women</Text>
                     <Text>Tops</Text>
                     <Text>Ethicwear</Text>
                     <Text>Bottoms</Text>
@@ -98,7 +99,8 @@ export default function FooterCategory() {
                     <Text>Return Policy</Text>
                     <Text>Help center</Text>
                 </Box>
-                </Flex>
+            </Flex>
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "30px", marginTop: "30px" }} />
         </Box>
     )
 }

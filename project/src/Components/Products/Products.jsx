@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Img, Text, Button, Select, Spacer } from "@chakra-ui/react"
+import { Box, Flex, Grid, GridItem, Img, Text, Button, Select, Spacer, Heading } from "@chakra-ui/react"
 import { useEffect } from "react"
 import axios from "axios"
 import { useState } from "react"
@@ -9,6 +9,8 @@ import Pagination from "./Pagination"
 import Filter from "./Filter"
 import handlePost from "./Post"
 import Discount from "./DiscountButton"
+import Navbar from "../Navbar/Navbar"
+import Footer from "../Footer/Footer"
 
 export default function Products() {
     const [data, setData] = useState([])
@@ -71,6 +73,10 @@ export default function Products() {
 
     return (
         <Box>
+            <Navbar/>
+            <Box w="95%" m="auto" mt="10px">
+                <Heading mb="20px" textAlign="start">Women Wear</Heading>
+                <hr style={{ borderColor: '#f7f8f7', marginTop: "10px", marginBottom: "25px" }} />
             <Filter handleFilter={handleFilter} handleColor={handleColor}
                 handleBrand={handleBrand} handleSize={handleSize} handleMaterial={handleMaterial}
                 handleType={handleType}
@@ -112,9 +118,8 @@ export default function Products() {
 
                             </Flex><Box m="auto" textAlign="center">
                                 <Button onClick={() => handlePost(item)} color="white" mt="20px" w="100%" p="5px" bg='#faa619'>ADD TO BASKET</Button>
-                                <Button>{Math.floor(((item.strikePrice - item.price) * 100) / item.price)}</Button>
+                                
                             </Box>
-
 
                         </Box>
                     </div>
@@ -126,7 +131,11 @@ export default function Products() {
             <Pagination handlePagePrev={handlePagePrev} handlePageNext={handlePageNext}
 
                 current={page} />
-            <hr style={{ borderColor: '#f7f8f7', marginTop: "10px", marginBottom: "25px" }} />
+                <hr style={{ borderColor: '#f7f8f7', marginTop: "10px", marginBottom: "25px" }} />
+                <Footer />
+            </Box>
+            
         </Box>
+
     )
 }
