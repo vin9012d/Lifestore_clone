@@ -6,4 +6,4 @@ export default function Discount({children}) {
 {children}% OFF
         </Button>
     )
-}
+} 
