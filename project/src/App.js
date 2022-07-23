@@ -16,12 +16,13 @@ import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
 import Home from './Components/Home';
 import Product1 from './Components/Producct1/Product1';
+import AllRoutes from './Components/Allroutes';
 
 
 function App() {
   return (
     <div className="App">
-      <Home/>
+      {/* <Home/> */}
       {/* <Product1/> */}
       {/* <Products/>
       <Cart/> */}
@@ -37,6 +38,7 @@ function App() {
       <FooterCategory /> */}
       {/* <Products/>
       <FooterBottom/> */}
+      <AllRoutes/>
     </div>
   );
 }

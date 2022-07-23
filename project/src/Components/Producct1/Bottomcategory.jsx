@@ -18,6 +18,7 @@ import dept1 from "./Medias/dept1.jpg"
 import dept2 from "./Medias/dept2.jpg"
 import dept3 from "./Medias/dept3.jpg"
 import flashSale from "./Medias/flashsale.jpg"
+import { Link } from "react-router-dom";
 
 export default function BottomCategory() {
     return (
@@ -26,7 +27,7 @@ export default function BottomCategory() {
         <Box>
             <Heading textAlign="left"mb="30px" mt="10px" >Wardrobe Essentials</Heading>
             <Flex justifyContent="space-between" >
-                <Img w="30%" src={ ward1} alt="ward1" />
+            <Link to="/women/products"> <Img w="30%" src={ ward1} alt="ward1" /></Link>
                 <Img w="30%" src={ ward2} alt="ward2" />
                 <Img w="30%" src={ ward3} alt="ward3" />
             </Flex>

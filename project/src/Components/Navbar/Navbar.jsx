@@ -7,6 +7,7 @@ import { faFacebook,faInstagram,faTwitter   } from '@fortawesome/free-brands-svg
 import { faHeart} from '@fortawesome/free-regular-svg-icons';
 import img1 from  "../Medias/lifestyle-logo.png"
 import Signin from "../Regestration/Sigin";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   
@@ -15,7 +16,8 @@ export default function Navbar() {
             <Stack direction={{ base: "row" }} spacing="9" p="5px"  alignItems="center" >
             <Img src={img1} alt="logo" sx={{height:"30px"}} />  
                 <Text>Men</Text>
-                <Text>Women</Text>
+                <Link to="/women"><Text>Women</Text></Link>
+                
                 <Text>Kids</Text>
                 <Text>Shoes & Bags</Text>
                 <Text>Beauty</Text>
@@ -29,7 +31,7 @@ export default function Navbar() {
                 <Signin />
      
            <span><FontAwesomeIcon icon={faHeart} size="xl"  /></span>
-           <span><FontAwesomeIcon icon={faBagShopping} size="xl" bg="white"/></span>
+         <Link to="/women/products/cart"> <Box> <span><FontAwesomeIcon icon={faBagShopping} size="xl" bg="white"/></span></Box></Link>
              
           </Stack>
         </Box>

@@ -7,6 +7,7 @@ import "./Cart.css"
 import {ExternalLinkIcon} from "@chakra-ui/icons"
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import { Link } from "react-router-dom"
 
 export default function Cart() {
     const [cart, setCart] = useState([])
@@ -97,7 +98,7 @@ export default function Cart() {
                             <Text>Total</Text>
                             <Text>{ totals[2]}</Text>
                         </Flex>
-                        <Button w="100%" colorScheme="orange" mt="20px"> Checkout Now</Button>
+                      <Link to="/women/products/cart/checkout">  <Button w="100%" colorScheme="orange" mt="20px"> Checkout Now</Button></Link>
 
                     </Box>
                     

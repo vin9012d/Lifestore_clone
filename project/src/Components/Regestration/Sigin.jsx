@@ -31,13 +31,28 @@ export default function Signin({}) {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        console.log("hitesh")
+        axios.get(`https://calm-harbor-19932.herokuapp.com/sigin`)
+            .then((res) => {
+                let ans = res.data.filter((item) => {
+                    return item.email == loginData.email && item.password == loginData.password;
+                })
+                if (ans.length > 0) {
+                    alert("You are sucessfully logged in")
+                } else {
+                    alert("wrong data entered")
+                }
+        })
     }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         console.log(data)
         setData({...data,[name]:value})
+    }
+    const handleLoginChange = (e) => {
+        const { name, value } = e.target;
+        console.log(data)
+        setloginData({...data,[name]:value})
     }
 
    
@@ -94,9 +109,9 @@ export default function Signin({}) {
          
                    
                             <FormLabel>Email id</FormLabel>
-                            <Input placeholder='Email id' />
+                            <Input placeholder='Email id' name="email" onChange={handleLoginChange} />
                             <FormLabel>Password</FormLabel>
-                            <Input placeholder='Password' />
+                            <Input placeholder='Password' name="password" onChange={handleLoginChange} />
                        
                         </ModalBody>
 

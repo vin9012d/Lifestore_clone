@@ -11,13 +11,14 @@ import lin10 from "./Medias/lin10.jpg"
 import lin11 from "./Medias/lin11.jpg"
 import lin12 from "./Medias/lin12.jpg"
 import { Box,Flex,Heading,Img, Text } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 export default function MiddleCategory() {
     return (
         <Box>
              <Heading textAlign="start">Shop by Category</Heading>
             <Flex flexWrap="wrap" justifyContent="space-between" >
                 <Box>
-                    <Img width="200px" mt="20px" height="200px" borderRadius="50%" src={lin1} alt="lin1" />
+                <Link to="/women/products"> <Img width="200px" mt="20px" height="200px" borderRadius="50%" src={lin1} alt="lin1" /></Link>
                     <Text as="b" size="lg">Lingeria</Text>
                 </Box>
                    <Box>

@@ -1,6 +1,7 @@
 import { Box, Img } from "@chakra-ui/react"
 import axios from "axios"
 import { useEffect,useState } from "react"
+import { Link } from "react-router-dom"
 import slider2 from "./Medias/slider2.gif"
 import slider3 from "./Medias/slider3.jpg"
 import slider3a from "./Medias/slider3a.jpg"
@@ -33,8 +34,9 @@ export default function AllAdd() {
 
     return (
         <Box>
-            {slider.length > 0 ? <Img src={slider[sldimg].image} h="400px" w="100%%" alt="sliderimage" /> : <h1>Loading...</h1>}
-            <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
+            <Link to="/women/products">            {slider.length > 0 ? <Img src={slider[sldimg].image} h="400px" w="100%%" alt="sliderimage" /> : <h1>Loading...</h1>}</Link>
+
+            <Link to="/women/products">  <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} /></Link>
             <Img w="100%" src={slider2} alt="slider2" />
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "40px", marginTop: "40px" }} />
             <Img w="100%" src={slider3} alt="slider3" />

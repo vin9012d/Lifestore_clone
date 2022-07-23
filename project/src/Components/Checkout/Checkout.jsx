@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormLabel, Heading, Img, Input, Radio, RadioGroup, Stack, Text } from "@chakra-ui/react";
+import { Alert, Box, Button, Flex, FormLabel, Heading, Img, Input, Radio, RadioGroup, Stack, Text } from "@chakra-ui/react";
 import creditcard from "./Media/creditcard.png"
 import mastercard from "./Media/mastercard.png"
 import visa from "./Media/visa.png"
@@ -159,13 +159,15 @@ export default function Checkout() {
             </Stack>
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />
             <Flex justifyContent="space-between" textAlign="center">
-                <Text>By clicking on Proceed to Payment, you agree to our Terms and Conditions</Text>
-                <Button colorScheme="orange" w="30%" p="20px">Place your Order</Button>
+                <Text textAlign="left" w="55%">By clicking on Proceed to Payment, you agree to our Terms and Conditions</Text>
+                        <Button onClick={() => alert("Your order placed successfully")
+                           
+    } colorScheme="orange" w="40%" p="20px">Place your Order</Button>
 
             </Flex>
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />
            
-            <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />
+            <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />  
             </Box>
             <Box w="35%">            <OrderSummary />
             </Box>
