@@ -10,24 +10,61 @@ import lin9 from "./Medias/lin9.jpg"
 import lin10 from "./Medias/lin10.jpg"
 import lin11 from "./Medias/lin11.jpg"
 import lin12 from "./Medias/lin12.jpg"
-import { Box,Flex,Img } from "@chakra-ui/react"
+import { Box,Flex,Heading,Img, Text } from "@chakra-ui/react"
+import { Link } from "react-router-dom"
 export default function MiddleCategory() {
     return (
         <Box>
-        
-            <Flex  flexWrap="wrap" justifyContent="space-between" >
-                <Img  width="200px" mt="20px" height="200px" borderRadius="50%" src={lin1} alt="lin1"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin2} alt="lin2"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin3} alt="lin3"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin4} alt="lin4"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin5} alt="lin5"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin6} alt="lin6"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin7} alt="lin7"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin8} alt="lin8"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin9} alt="lin9"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin10} alt="lin10"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin11} alt="lin11"  />
-                <Img width="200px"  mt="20px" h="200px" borderRadius="50%" src={lin12} alt="lin12"  /> 
+             <Heading textAlign="start">Shop by Category</Heading>
+            <Flex flexWrap="wrap" justifyContent="space-between" >
+                <Box>
+                <Link to="/women/products"> <Img width="200px" mt="20px" height="200px" borderRadius="50%" src={lin1} alt="lin1" /></Link>
+                    <Text as="b" size="lg">Lingeria</Text>
+                </Box>
+                   <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin2} alt="lin2" />
+                    <Text as="b" size="lg">Tees</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin3} alt="lin3" />
+                    <Text as="b" size="lg">Kurta</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin4} alt="lin4" />
+                    <Text as="b" size="lg">Western Dress</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin5} alt="lin5" />
+                    <Text as="b" size="lg">Indian Dress</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin6} alt="lin6" />
+                    <Text as="b" size="lg">Shorts</Text>
+                    </Box>
+  <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin7} alt="lin7" />
+                    <Text as="b" size="lg">Gym wear</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin8} alt="lin8" />
+                    <Text as="b" size="lg">Night wear</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin9} alt="lin9" />
+                    <Text as="b" size="lg">Tops</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin10} alt="lin10" />
+                    <Text as="b" size="lg">Watch</Text>
+                </Box>
+                <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin11} alt="lin11" />
+                    <Text as="b" size="lg">Foot wear</Text>
+                    </Box>
+                    <Box>
+                    <Img width="200px" mt="20px" h="200px" borderRadius="50%" src={lin12} alt="lin12" /> 
+                    <Text as="b" size="lg">Makeup</Text>
+                    </Box>
         </Flex>
         
         

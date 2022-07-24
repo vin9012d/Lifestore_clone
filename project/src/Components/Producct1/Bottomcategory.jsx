@@ -18,22 +18,23 @@ import dept1 from "./Medias/dept1.jpg"
 import dept2 from "./Medias/dept2.jpg"
 import dept3 from "./Medias/dept3.jpg"
 import flashSale from "./Medias/flashsale.jpg"
+import { Link } from "react-router-dom";
 
 export default function BottomCategory() {
     return (
         <Box>
 
         <Box>
-            <Heading textAlign="left"mb="30px" >Wardrobe Essentials</Heading>
+            <Heading textAlign="left"mb="30px" mt="10px" >Wardrobe Essentials</Heading>
             <Flex justifyContent="space-between" >
-                <Img w="30%" src={ ward1} alt="ward1" />
+            <Link to="/women/products"> <Img w="30%" src={ ward1} alt="ward1" /></Link>
                 <Img w="30%" src={ ward2} alt="ward2" />
                 <Img w="30%" src={ ward3} alt="ward3" />
             </Flex>
             </Box>
 
             <Box>
-            <Heading textAlign="left"mb="30px" >Essential Range</Heading>
+            <Heading textAlign="left"mb="30px" mt="10px" >Essential Range</Heading>
             <Flex justifyContent="space-between" >
                 <Img w="30%" src={ essen1} alt="essen1" />
                 <Img w="30%" src={ essen2} alt="essen2" />
@@ -41,7 +42,7 @@ export default function BottomCategory() {
             </Flex>
             </Box>
         <Box>
-            <Heading textAlign="left"mb="30px" >Top Trending Styles</Heading>
+            <Heading textAlign="left"mb="30px" mt="10px" >Top Trending Styles</Heading>
             <Flex justifyContent="space-between" >
                 <Img w="23%" src={ top1} alt="top1" />
                 <Img w="23%" src={ top2} alt="top2" />
@@ -50,7 +51,7 @@ export default function BottomCategory() {
             </Flex>
             </Box>
         <Box>
-            <Heading textAlign="left"mb="30px" >Trendsetters</Heading>
+            <Heading textAlign="left"mb="30px" mt="10px" >Trendsetters</Heading>
             <Flex justifyContent="space-between" >
                 <Img w="30%" src={ trend1} alt="trend1" />
                 <Img w="30%" src={ trend2} alt="trend2" />
@@ -59,15 +60,15 @@ export default function BottomCategory() {
             </Flex>
             </Box>
             <Box>
-                <Heading>Flash Sale for today</Heading>
-                <Img src={flashSale} alt="flashSale" />
+                <Heading textAlign="start" mb="30px" mt="15px">Flash Sale for today</Heading>
+                <Img w="100%" src={flashSale} alt="flashSale" />
             </Box>
 
         <Box>
-            <Heading textAlign="left"mb="30px" >Top Trending Styles</Heading>
+            <Heading textAlign="left"mb="30px" mt="15px" >Top Trending Styles</Heading>
             <Flex justifyContent="space-between" >
-                <Img w="45%" src={ best1} alt="best1" />
-                <Img w="45%" src={ best2} alt="best2" />
+                <Img w="47%" src={ best1} alt="best1" />
+                <Img w="47%" src={ best2} alt="best2" />
                
             </Flex>
             </Box>

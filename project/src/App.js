@@ -12,20 +12,33 @@ import Products from './Components/Products/Products';
 import AllAdd from './Components/Producct1/AllAdd';
 import BottomCategory from './Components/Producct1/Bottomcategory';
 import MiddleCategory from './Components/Producct1/MiddleCategory';
+import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Checkout/Checkout';
+import Home from './Components/Home';
+import Product1 from './Components/Producct1/Product1';
+import AllRoutes from './Components/Allroutes';
 
 
 function App() {
   return (
     <div className="App">
+      {/* <Home/> */}
+      {/* <Product1/> */}
+      {/* <Products/>
+      <Cart/> */}
+      {/* <Checkout /> */}
+      {/* 
+      <Cart/>
       <AllAdd />
       <MiddleCategory/>
       <BottomCategory/>
-      <Navbar />
+      <Navbar /> */}
       {/* <Category/>
       <FooterTop />
       <FooterCategory /> */}
-      <Products/>
-      <FooterBottom/>
+      {/* <Products/>
+      <FooterBottom/> */}
+      <AllRoutes/>
     </div>
   );
 }
