@@ -169,7 +169,7 @@ export default function Checkout() {
            
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />  
             </Box>
-            <Box w="35%">            <OrderSummary />
+            <Box w="35%">            <OrderSummary />  
             </Box>
 
             </Flex>
