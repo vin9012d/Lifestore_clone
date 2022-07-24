@@ -11,10 +11,12 @@ import handlePost from "./Post"
 import Discount from "./DiscountButton"
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import { useSearchParams } from "react-router-dom"
 
 export default function Products() {
     const [data, setData] = useState([])
-    const [page, setPage] = useState(1)
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
     const [filter, setFilter] = useState("")
     const [price, setPrice] = useState(null)
     const [size, setSize] = useState(null)
@@ -22,6 +24,7 @@ export default function Products() {
     const [material, setMaterial] = useState(null)
     const [type, setType] = useState(null)
     const [brand, setBrand] = useState(null)
+   
 
     const handlePageNext = () => {
         console.log("vinod")
@@ -35,6 +38,11 @@ export default function Products() {
         console.log(e.target.value)
     }
     const filterData = () => {
+        setSearchParams({
+            page,
+            
+          });
+
         axios.get(`https://calm-harbor-19932.herokuapp.com/women?_page=${page}&_limit=20&${!color ? "" : "color=" + color}&${!size ? "" : "size=" + size}&${!material ? "" : "material=" + material}&${!brand ? "" : "brand=" + brand}&${!type ? "" : "type=" + type}`)
             .then((res) => {
                 console.log(res.data)
