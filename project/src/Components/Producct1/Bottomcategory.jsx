@@ -27,7 +27,7 @@ export default function BottomCategory() {
         <Box>
             <Heading textAlign="left"mb="30px" mt="10px" >Wardrobe Essentials</Heading>
             <Flex justifyContent="space-between" >
-            <Link to="/women/products"> <Img w="30%" src={ ward1} alt="ward1" /></Link>
+            <Link to="/women/products"> <Img w="100%" src={ ward1} alt="ward1" /></Link>
                 <Img w="30%" src={ ward2} alt="ward2" />
                 <Img w="30%" src={ ward3} alt="ward3" />
             </Flex>

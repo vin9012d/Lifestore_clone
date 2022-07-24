@@ -11,22 +11,25 @@ import {
     FormLabel,Button,Input,Text,useDisclosure
   } from '@chakra-ui/react'
 import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
 
 export default function Signin({}) {
-
+    const {handleAuth}=useContext(AuthContext)
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [pagelogin,setPagelogin]=useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [data,setData]=useState({name:"",email:"",password:""})
-    const [loginData,setloginData]=useState({name:"",email:""})
+    const [loginData,setloginData]=useState({password:"",email:""})
     const handleSignin = (e) => {
         e.preventDefault();
         axios.post(`https://calm-harbor-19932.herokuapp.com/sigin`, {
             ...data,"vinod":"bhai"
         }).then((res) => {
             console.log(res)
-        }).catch((err)=>{console.log(err)})
+        }).catch((err) => { console.log(err) })
+        alert("you are sucessfully signed in")
     }
 
     const handleLogin = (e) => {
@@ -37,7 +40,10 @@ export default function Signin({}) {
                     return item.email == loginData.email && item.password == loginData.password;
                 })
                 if (ans.length > 0) {
-                    alert("You are sucessfully logged in")
+                    handleAuth()
+                   alert("You are sucessfully logged in")
+                   onClose()
+                   
                 } else {
                     alert("wrong data entered")
                 }
@@ -51,8 +57,8 @@ export default function Signin({}) {
     }
     const handleLoginChange = (e) => {
         const { name, value } = e.target;
-        console.log(data)
-        setloginData({...data,[name]:value})
+        console.log(loginData)
+        setloginData({...loginData,[name]:value})
     }
 
    
@@ -81,7 +87,7 @@ export default function Signin({}) {
                             <Input placeholder='Email id' name="email" onChange={handleChange} />
                             <FormLabel>Password</FormLabel >
                             <Input placeholder='Password' name="password"  onChange={handleChange} />
-                            <span>Allready user? <span color="blue" onClick={()=>setPagelogin(true)}>Login</span></span>
+                            <span>Allready user? <span style={{color:"orange"}} onClick={()=>setPagelogin(true)}>Login</span></span>
                         </ModalBody>
 
                         <ModalFooter>

@@ -4,11 +4,11 @@ export const AuthContext = React.createContext();
 
 function AuthContextProvider({ children }) {
   const [state, setState] = useState({
-    isAuth: true,
+    isAuth: false,
   
   });
 
-  function handleLogin() {
+  function handleAuth() {
     setState({
       ...state,
       isAuth: true,
@@ -24,7 +24,7 @@ function AuthContextProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ state, handleLogin, handleLogout }}>
+    <AuthContext.Provider value={{ state, handleAuth, handleLogout }}>
       {children}
     </AuthContext.Provider>
   );

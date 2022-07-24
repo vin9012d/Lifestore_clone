@@ -12,8 +12,14 @@ import netbanking from "./Media/netbanking.webp"
 import comodo from "./Media/comodo.png"
 import logo from "../Medias/lifestyle-logo.png"
 import OrderSummary from "./OrderSummary";
+import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
+    const navigate = useNavigate()
+    const handleClick = () => {
+        alert("Your order placed successfully")
+       navigate("/")
+    }
     return (
         <Box>
                   <Box >
@@ -160,9 +166,9 @@ export default function Checkout() {
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />
             <Flex justifyContent="space-between" textAlign="center">
                 <Text textAlign="left" w="55%">By clicking on Proceed to Payment, you agree to our Terms and Conditions</Text>
-                        <Button onClick={() => alert("Your order placed successfully")
+                        <Button onClick={handleClick}
                            
-    } colorScheme="orange" w="40%" p="20px">Place your Order</Button>
+     colorScheme="orange" w="40%" p="20px">Place your Order</Button>
 
             </Flex>
             <hr style={{ borderColor: '#f7f8f7', marginBottom: "10px", marginTop: "10px" }} />
